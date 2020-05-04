@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header'); -%>
+  <body>
+    <%- include('layouts/navbar'); -%>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4>Your Profile</h4>
+                      <hr />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form>
+                        <div class="form-group row">
+                          <label for="name" class="col-4 col-form-label"
+                            >First Name</label
+                          >
+                          <div class="col-8">
+                            <input
+                              id="name"
+                              name="name"
+                              placeholder="First Name"
+                              class="form-control here"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="email" class="col-4 col-form-label"
+                            >Email</label
+                          >
+                          <div class="col-8">
+                            <input
+                              id="email"
+                              name="email"
+                              placeholder="Email"
+                              class="form-control here"
+                              required="required"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="publicinfo" class="col-4 col-form-label"
+                            >Bio</label
+                          >
+                          <div class="col-8">
+                            <textarea
+                              id="publicinfo"
+                              name="publicinfo"
+                              cols="40"
+                              rows="4"
+                              class="form-control"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="newpass" class="col-4 col-form-label"
+                            >New Password</label
+                          >
+                          <div class="col-8">
+                            <input
+                              id="newpass"
+                              name="newpass"
+                              placeholder="New Password"
+                              class="form-control here"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-4 col-8">
+                            <button
+                              name="submit"
+                              type="submit"
+                              class="btn btn-primary"
+                            >
+                              Update My Profile
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr />
+
+    <%- include('layouts/footer'); -%> <%- include('layouts/scripts'); -%>
+  </body>
+</html>

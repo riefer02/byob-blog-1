@@ -1,0 +1,12 @@
+h1 {
+	font-family: 'Domine', serif;
+}
+
+.font-kalam {
+	font-family: 'Kalam', cursive !important;
+}
+
+.container .navbar-brand {
+	letter-spacing: 1px;
+	font-weight: 300;
+}

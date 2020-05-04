@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header'); -%>
+  <body>
+    <%- include('layouts/navbar'); -%>
+
+    <!-- Page Header -->
+    <header
+      class="masthead"
+      style="background-image: url('/img/byob-collage-1.jpg');"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Create New Post</h1>
+              <span class="subheading font-kalam">Tell us a story.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <form
+            action="/posts/store"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Title"
+                  id="title"
+                  name="title"
+                />
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Description</label>
+                <textarea
+                  id="body"
+                  rows="5"
+                  class="form-control"
+                  name="body"
+                  placeholder="Description"
+                ></textarea>
+                <script>
+                  $('#body').summernote({
+                    placeholder: `Don't say LSD and Lonestar.`,
+                    tabsize: 2,
+                    height: 200,
+                  });
+                </script>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group control">
+                <label>Image</label>
+                <input
+                  type="file"
+                  id="image"
+                  class="form-control"
+                  name="image"
+                />
+              </div>
+            </div>
+            <br />
+            <div id="success"></div>
+            <div class="form-group">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="sendMessageButton"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <%- include('layouts/footer'); -%> <%- include('layouts/scripts'); -%>
+  </body>
+</html>
